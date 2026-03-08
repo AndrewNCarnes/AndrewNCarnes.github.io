@@ -10,3 +10,16 @@
         display: none;
     }
 }
+
+#header h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
+
+@media screen and (max-width: 736px) {
+    #header h1 a:last-child {
+        display: none;
+    }
+}
