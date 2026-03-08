@@ -163,5 +163,18 @@
 					 .css('opacity', '1')
 					 .css('transform', 'translateY(0)');
 		}, 300);
+		
+// Active menu highlighting
+    var currentPage = window.location.pathname.split('/').pop() || '/';
+    $('#menu .links a').each(function() {
+        var href = $(this).attr('href');
+        if (href === '/' && (currentPage === '' || currentPage === '/') ) {
+			$(this).css('color', '#9bf1ff');
+			$(this).css('font-weight', 'bold');
+        } else if (href !== '/' && currentPage === href.split('/').pop()) {
+			$(this).css('color', '#9bf1ff');
+			$(this).css('font-weight', 'bold');
+        }
+    });
 
 })(jQuery);
