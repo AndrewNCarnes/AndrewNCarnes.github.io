@@ -142,4 +142,26 @@
 
 			});
 
+	// Scroll fade-in for sections.
+		$('#one').css('opacity', '0').css('transform', 'translateY(30px)');
+
+		$('#wrapper > section:not(#one), #four .features article').each(function() {
+			var $this = $(this);
+			$this.css('opacity', '0').css('transform', 'translateY(30px)').css('transition', 'opacity 0.6s ease, transform 0.6s ease');
+
+			$this.scrollex({
+				top: '20%',
+				enter: function() {
+					$this.css('opacity', '1').css('transform', 'translateY(0)');
+				}
+			});
+		});
+
+	// Fade in the first section on load.
+		window.setTimeout(function() {
+			$('#one').css('transition', 'opacity 0.6s ease, transform 0.6s ease')
+					 .css('opacity', '1')
+					 .css('transform', 'translateY(0)');
+		}, 300);
+
 })(jQuery);
