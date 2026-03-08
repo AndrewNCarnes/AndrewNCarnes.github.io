@@ -17,13 +17,13 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-    <h1>
-		<img src="images/andrewLogo-Photoroom.png" alt="Andrew Carnes" style="width: 65px; height: 65px; object-fit: contain; vertical-align: middle; margin-right: 10px;" />        <a href="/">Mechanical Engineering Portfolio</a>
-    </h1>
-    <nav>
-        <a href="#menu">Menu</a>
-    </nav>
-</header>
+						<h1>
+							<img src="images/andrewLogo-Photoroom.png" alt="Andrew Carnes" style="width: 65px; height: 65px; object-fit: contain; vertical-align: middle; margin-right: 10px;" />        <a href="/">Mechanical Engineering Portfolio</a>
+						</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
@@ -51,7 +51,7 @@
 						<!-- About -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/andrewHeadshot.jpg" alt="" /></a>
+									<a class="image"><img src="images/andrewHeadshot.jpg" alt="" /></a>
 									<div class="content">
 										<h2 class="major">About Me</h2>
 										<p>Thanks for checking out my portfolio (whether you’re a recruiter, fellow engineer, or friend!) I'm a Sophomore in the Burnett Honors College at the University of Central Florida majoring in Mechanical Engineering. I make High Power Rockets, do some cool rocket plume research, and have some even cooler projects I'd like to share with you!</p>
@@ -116,7 +116,7 @@
 										</article>
 									</section>
 									<ul class="actions">
-										<li><a href="resume.html" class="button">View Full Resume</a></li>
+										<li><a href="/assets/documents/Andrew_Carnes_Mechanical_Resume_2-21-26.pdf" class="button">Download Full Resume</a></li>
 									</ul>
 								</div>
 							</section>
@@ -124,40 +124,12 @@
 					</section>
 
 				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>I'm always open to discussing engineering opportunities, research collaborations, or internships. Feel free to reach out!</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-map-marker-alt">Orlando, FL</li>
-								<li class="icon solid fa-envelope"><a href="mailto:AndrewNCarnes@gmail.com">AndrewNCarnes@gmail.com</a></li>
-								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/acarnes313/" target="_blank">linkedin.com/in/acarnes313</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; 2026 Andrew Carnes</li>
-							</ul>
-						</div>
-					</section>
-
+					<script>
+						fetch('footer.html')
+							.then(res => res.text())
+							.then(data => document.getElementById('footer-placeholder').innerHTML = data);
+					</script>
+					<div id="footer-placeholder"></div>
 			</div>
 
 		<!-- Scripts -->
